@@ -108,9 +108,9 @@
         var isDropped = false;
 
         function socialdropdown() {
+            isDropped = !isDropped;
             document.getElementById("socialdropdown").style.display = isDropped ? "block" : "none";
             console.log("Open: " + isDropped.toString())
-            isDropped = !isDropped;
         }
 
     </script>
