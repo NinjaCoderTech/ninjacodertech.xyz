@@ -5,7 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <script src="https://kit.fontawesome.com/c05b74df35.js" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.2.0/styles/base16/tomorrow-night.min.css"/>
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.2.0/styles/base16/tomorrow-night.min.css" />
     <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.2.0/highlight.min.js"></script>
     <script>hljs.highlightAll();</script>
 
@@ -71,7 +72,8 @@
             text-align: center;
         }
 
-        #socialdropdown, #socialdropdownicon {
+        #socialdropdown,
+        #socialdropdownicon {
             display: none;
         }
 
@@ -97,6 +99,17 @@
             }
         }
 
+        ::-moz-selection {
+            /* Code for Firefox */
+            color: white !important;
+            background: #8adc15 !important;
+        }
+
+        ::selection {
+            color: white !important;
+            background: #8adc15 !important;
+        }
+
         /*
         @media screen and (max-width: 400px) {
             .sidebar a {
@@ -114,10 +127,12 @@
         <a id="bars" href="javascript:toggleSidebar();"><i class="fas fa-times"></i></a>
         <div id="mainsidebar">
             <a class="active" href="/"><i class="fas fa-home"></i> Home</a>
-            <a href="javascript:socialDropdown();" id="social"><i class="fas fa-user"></i> Social <i class="fas fa-chevron-down"></i></a>
+            <a href="javascript:socialDropdown();" id="social"><i class="fas fa-user"></i> Social <i
+                    class="fas fa-chevron-down"></i></a>
             <div id="socialdropdown">
                 <a href="https://discord.gg/Uyb2DvyG7y" target="_blank"><i class="fab fa-discord"></i> Discord</a>
-                <a href="https://www.youtube.com/channel/UCR1TSLg6qOs-qZ8lkiuaLoA" target="_blank"><i class="fab fa-youtube"></i> YouTube</a>
+                <a href="https://www.youtube.com/channel/UCR1TSLg6qOs-qZ8lkiuaLoA" target="_blank"><i
+                        class="fab fa-youtube"></i> YouTube</a>
                 <a href="https://ninjacodertech.itch.io/" target="_blank"><i class="fab fa-itch-io"></i> Itch.io</a>
                 <a href="https://github.com/NinjaCoderTech" target="_blank"><i class="fab fa-github"></i> GitHub</a>
                 <a href="mailto:ninja.coder.tech@gmail.com"><i class="fas fa-envelope"></i> Email</a>
@@ -125,10 +140,12 @@
         </div>
         <div id="iconsidebar">
             <a class="active" href="/"><i class="fas fa-home"></i></a>
-            <a href="javascript:socialDropdown();" id="social"><i class="fas fa-user"></i> <i class="fas fa-chevron-down"></i></a>
+            <a href="javascript:socialDropdown();" id="social"><i class="fas fa-user"></i> <i
+                    class="fas fa-chevron-down"></i></a>
             <div id="socialdropdownicon">
                 <a href="https://discord.gg/Uyb2DvyG7y" target="_blank"><i class="fab fa-discord"></i></a>
-                <a href="https://www.youtube.com/channel/UCR1TSLg6qOs-qZ8lkiuaLoA" target="_blank"><i class="fab fa-youtube"></i></a>
+                <a href="https://www.youtube.com/channel/UCR1TSLg6qOs-qZ8lkiuaLoA" target="_blank"><i
+                        class="fab fa-youtube"></i></a>
                 <a href="https://ninjacodertech.itch.io/" target="_blank"><i class="fab fa-itch-io"></i></a>
                 <a href="https://github.com/NinjaCoderTech" target="_blank"><i class="fab fa-github"></i></a>
                 <a href="mailto:ninja.coder.tech@gmail.com"><i class="fas fa-envelope"></i></a>
@@ -166,14 +183,14 @@
             document.getElementById("bars").innerHTML = sidebarVisible ? '<i class="fas fa-times"></i>' : '<i class="fas fa-bars"></i>';
 
             document.getElementById("bars").style.textAlign = sidebarVisible ? "right" : "center";
-            
+
             document.getElementsByClassName("content")[0].style.marginLeft = sidebarVisible ? "15vw" : "0vw";
         }
 
         if (window.location.protocol == "http:") indow.location.protocol = "https:";
 
-        document.getElementById("howtogetdarkthemecodeblocks").innerHTML = 
-`&lt;!DOCTYPE html&gt;
+        document.getElementById("howtogetdarkthemecodeblocks").innerHTML =
+            `&lt;!DOCTYPE html&gt;
 
 &lt;html&gt;
     &lt;head&gt;
