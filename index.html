@@ -25,11 +25,11 @@
             overflow: auto;
             z-index: 1;
         }
-        
-         #mainsidebar {
-             display: block;
+
+        #mainsidebar {
+            display: block;
         }
-        
+
         #bars {
             text-align: right;
         }
@@ -67,6 +67,10 @@
 
 
         @media screen and (max-width: 700px) {
+            #bars {
+                display: none;
+            }
+
             .sidebar {
                 width: 100%;
                 height: auto;
@@ -99,11 +103,13 @@
     <div class="sidebar">
         <a id="bars" href="javascript:toggleSidebar();"><i class="fas fa-bars"></i></a>
         <div id="mainsidebar">
-        <a class="active" href="/"><i class="fas fa-home"></i> Home</a>
-        <a href="javascript:socialDropdown();" id="social"><i class="fas fa-user"></i> Social <i class="fas fa-chevron-down"></i></a>
-        <div id="socialdropdown">
+            <a class="active" href="/"><i class="fas fa-home"></i> Home</a>
+            <a href="javascript:socialDropdown();" id="social"><i class="fas fa-user"></i> Social <i
+                    class="fas fa-chevron-down"></i></a>
+            <div id="socialdropdown">
                 <a href="https://discord.gg/Uyb2DvyG7y" target="_blank"><i class="fab fa-discord"></i> Discord</a>
-                <a href="https://www.youtube.com/channel/UCR1TSLg6qOs-qZ8lkiuaLoA" target="_blank"><i class="fab fa-youtube"></i> YouTube</a>
+                <a href="https://www.youtube.com/channel/UCR1TSLg6qOs-qZ8lkiuaLoA" target="_blank"><i
+                        class="fab fa-youtube"></i> YouTube</a>
                 <a href="https://ninjacodertech.itch.io/" target="_blank"><i class="fab fa-itch-io"></i> Itch.io</a>
                 <a href="https://github.com/NinjaCoderTech" target="_blank"><i class="fab fa-github"></i> GitHub</a>
                 <a href="mailto:ninja.coder.tech@gmail.com"><i class="fas fa-envelope"></i> Email</a>
@@ -118,19 +124,20 @@
     <script>
 
         var isDropped = false;
-        
+
         var sidebarVisible = true;
 
         function socialDropdown() {
             isDropped = !isDropped;
             document.getElementById("socialdropdown").style.display = isDropped ? "block" : "none";
         }
-        
+
         function toggleSidebar() {
             sidebarVisible = !sidebarVisible;
             document.getElementById("mainsidebar").style.display = sidebarVisible ? "block" : "none";
+            document.getElementsByClassName("sidebar")[0].style.width = sidebarVisible ? "15vw" : "5vw";
         }
-        
+
         if (window.location.protocol == "http:") {
             window.location.protocol = "https:";
         }
@@ -138,4 +145,5 @@
     </script>
 
 </body>
+
 </html>
