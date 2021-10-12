@@ -51,7 +51,7 @@
             color: white;
         }
 
-        div.content {
+        .content {
             margin-left: 15vw;
             padding: 1px 16px;
             z-index: -1;
@@ -140,7 +140,7 @@
 
             document.getElementById("bars").style.textAlign = sidebarVisible ? "right" : "center";
             
-            document.getElementById("content").style.marginLeft = sidebarVisible ? "15vw" : "5vw";
+            document.getElementsByClassName("content")[0].style.marginLeft = sidebarVisible ? "15vw" : "5vw";
         }
 
         if (window.location.protocol == "http:") indow.location.protocol = "https:";
