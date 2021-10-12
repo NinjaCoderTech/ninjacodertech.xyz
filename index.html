@@ -135,6 +135,7 @@
             //document.getElementById("mainsidebar").style.display = sidebarVisible ? "block" : "none";
             document.querySelectorAll('[id=navtext]').forEach(navtext => {
                 navtext.style.display = sidebarVisible ? "block" : "none";
+                navtext.style.textAlign = sidebarVisible ? "left" : "center";
             });
 
             document.getElementsByClassName("sidebar")[0].style.width = sidebarVisible ? "15vw" : "5vw";
