@@ -27,7 +27,7 @@
         }
         
          #mainsidebar {
-             display: none;
+             display: block;
         }
         
         #bars {
@@ -97,7 +97,7 @@
 <body>
 
     <div class="sidebar">
-        <a id="bars" href="toggleSidebar();"></a>
+        <a id="bars" href="javascript:toggleSidebar();"></a>
         <div id="mainsidebar">
         <a class="active" href="/"><i class="fas fa-home"></i> Home</a>
         <a href="javascript:socialDropdown();" id="social"><i class="fas fa-user"></i> Social <i class="fas fa-chevron-down"></i></a>
@@ -119,7 +119,7 @@
 
         var isDropped = false;
         
-        var sidebarVisible = false;
+        var sidebarVisible = true;
 
         function socialDropdown() {
             isDropped = !isDropped;
