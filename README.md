@@ -1,2 +1,1 @@
-# ninjacodertech.xyz
-Repo for https://ninjacodertech.xyz/
+# Repo for https://www.ninjacodertech.xyz/
