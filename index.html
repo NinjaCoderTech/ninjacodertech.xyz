@@ -101,7 +101,7 @@
 <body>
 
     <div class="sidebar">
-        <a id="bars" href="javascript:toggleSidebar();"><i class="fas fa-bars"></i></a>
+        <a id="bars" href="javascript:toggleSidebar();"></a>
         <div id="mainsidebar">
             <a class="active" href="/"><i class="fas fa-home"></i> Home</a>
             <a href="javascript:socialDropdown();" id="social"><i class="fas fa-user"></i> Social <i
@@ -135,7 +135,11 @@
         function toggleSidebar() {
             sidebarVisible = !sidebarVisible;
             document.getElementById("mainsidebar").style.display = sidebarVisible ? "block" : "none";
-            document.getElementsByClassName("sidebar")[0].style.width = sidebarVisible ? "15vw" : "3vw";
+            document.getElementsByClassName("sidebar")[0].style.width = sidebarVisible ? "15vw" : "5vw";
+
+            document.getElementById("bars").innerHTML = sidebarVisible ? '<i class="fas fa-bars"></i>' : '<i class="fas fa-times"></i>';
+
+            document.getElementById("bars").style.textAlign = sidebarVisible ? "right" : "center";
         }
 
         if (window.location.protocol == "http:") {
