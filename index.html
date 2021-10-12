@@ -114,6 +114,10 @@
             document.getElementById("socialdropdown").style.display = isDropped ? "block" : "none";
             console.log("Open: " + isDropped.toString())
         }
+        
+        if (window.location.protocol == "http:") {
+            window.location.protocol = "https:";
+        }
 
     </script>
 
