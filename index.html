@@ -25,6 +25,10 @@
             overflow: auto;
             z-index: 1;
         }
+        
+         #mainsidebar {
+             display: none;
+        }
 
         .sidebar a {
             display: block;
@@ -89,15 +93,17 @@
 <body>
 
     <div class="sidebar">
+        <a id="bars" href="toggleSidebar();"></a>
+        <div id="mainsidebar">
         <a class="active" href="/"><i class="fas fa-home"></i> Home</a>
-        <a href="javascript:socialdropdown();" id="social"><i class="fas fa-user"></i> Social <i class="fas fa-chevron-down"></i></a>
+        <a href="javascript:socialDropdown();" id="social"><i class="fas fa-user"></i> Social <i class="fas fa-chevron-down"></i></a>
         <div id="socialdropdown">
-            <a href="https://discord.gg/Uyb2DvyG7y" target="_blank"><i class="fab fa-discord"></i> Discord</a>
-            <a href="https://www.youtube.com/channel/UCR1TSLg6qOs-qZ8lkiuaLoA" target="_blank"><i
-                    class="fab fa-youtube"></i> YouTube</a>
-            <a href="https://ninjacodertech.itch.io/" target="_blank"><i class="fab fa-itch-io"></i> Itch.io</a>
-            <a href="https://github.com/NinjaCoderTech" target="_blank"><i class="fab fa-github"></i> GitHub</a>
-            <a href="mailto:ninja.coder.tech@gmail.com"><i class="fas fa-envelope"></i> Email</a>
+                <a href="https://discord.gg/Uyb2DvyG7y" target="_blank"><i class="fab fa-discord"></i> Discord</a>
+                <a href="https://www.youtube.com/channel/UCR1TSLg6qOs-qZ8lkiuaLoA" target="_blank"><i class="fab fa-youtube"></i> YouTube</a>
+                <a href="https://ninjacodertech.itch.io/" target="_blank"><i class="fab fa-itch-io"></i> Itch.io</a>
+                <a href="https://github.com/NinjaCoderTech" target="_blank"><i class="fab fa-github"></i> GitHub</a>
+                <a href="mailto:ninja.coder.tech@gmail.com"><i class="fas fa-envelope"></i> Email</a>
+            </div>
         </div>
     </div>
 
@@ -108,11 +114,17 @@
     <script>
 
         var isDropped = false;
+        
+        var sidebarVisible = false;
 
-        function socialdropdown() {
+        function socialDropdown() {
             isDropped = !isDropped;
             document.getElementById("socialdropdown").style.display = isDropped ? "block" : "none";
-            console.log("Open: " + isDropped.toString())
+        }
+        
+        function toggleSidebar() {
+            sidebarVisible = !sidebarVisible;
+            document.getElementById("mainsidebar").style.display = sidebarVisible ? "block" : "none";
         }
         
         if (window.location.protocol == "http:") {
