@@ -65,7 +65,7 @@
             text-align: center;
         }
 
-        #socialdropdown {
+        #socialdropdown, #socialdropdownicon {
             display: none;
         }
 
@@ -143,10 +143,6 @@
         function socialDropdown() {
             isDropped = !isDropped;
             document.getElementById("socialdropdown").style.display = isDropped ? "block" : "none";
-        }
-
-        function socialDropdownIcon() {
-            isDropped = !isDropped;
             document.getElementById("socialdropdownicon").style.display = isDropped ? "block" : "none";
         }
 
