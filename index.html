@@ -3,7 +3,8 @@
 
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" type="image/png" href="https://github.com/NinjaCoderTech/ninjacodertech.xyz/blob/main/logo1.PNG?raw=true"/>
+    <link rel="icon" type="image/png"
+        href="https://github.com/NinjaCoderTech/ninjacodertech.xyz/blob/main/logo1.PNG?raw=true" />
     <meta content="Ninja Coder Tech" property="og:title" />
     <meta content="Ninja Coder Tech's website for testing." property="og:description" />
     <meta content="https://www.ninjacodertech.xyz/" property="og:url" />
@@ -33,7 +34,7 @@
             position: fixed;
             height: 100vh;
             overflow: auto;
-            z-index: 1;
+            z-index: 2;
         }
 
         #mainsidebar {
@@ -74,6 +75,8 @@
         #head {
             text-align: center;
             font-size: 3rem;
+            z-index: 1;
+            color: white;
         }
 
         #socialdropdown,
@@ -98,7 +101,7 @@
                 text-align: center;
             }
 
-            div.content {
+            .content {
                 margin-left: 0;
             }
         }
@@ -198,7 +201,9 @@
     </div>
 
     <section class="content">
-        <h1 id="head">Ninja Coder Tech</h1>
+        <div id="head">
+            <h1>Ninja Coder Tech</h1>
+        </div>
         <hr>
         <h2>Testing</h2>
         <h3>How To Get HTML Code Blocks (Dark Theme)</h3>
@@ -279,6 +284,7 @@ public class MyClass {
         }
 
         if (window.location.protocol == "http:") window.location.protocol = "https:";
+        if (window.location.pathname == "/index.html") window.location.pathname = "/";
     </script>
 
 
