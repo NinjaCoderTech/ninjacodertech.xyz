@@ -110,6 +110,46 @@
             background: #8adc15 !important;
         }
 
+        .tooltip {
+            position: relative;
+            display: inline-block;
+            border-bottom: 1px dotted black;
+        }
+
+        .tooltip .tooltiptext {
+            visibility: hidden;
+            width: 120px;
+            background-color: black;
+            color: #fff;
+            text-align: center;
+            border-radius: 6px;
+            padding: 5px 0;
+            position: absolute;
+            z-index: 1;
+            bottom: 150%;
+            left: 50%;
+            margin-left: -60px;
+            opacity: 0;
+            transition: opacity 1s;
+        }
+
+        .tooltip .tooltiptext::after {
+            content: "";
+            position: absolute;
+            top: 100%;
+            left: 50%;
+            margin-left: -5px;
+            border-width: 5px;
+            border-style: solid;
+            border-color: black transparent transparent transparent;
+        }
+
+        .tooltip:hover .tooltiptext {
+            visibility: visible;
+            opacity: 1;
+            transition: opacity 1s;
+        }
+
         /*
         @media screen and (max-width: 400px) {
             .sidebar a {
@@ -158,6 +198,10 @@
         <hr>
         <h2>Testing</h2>
         <pre><code class="language-html" id="howtogetdarkthemecodeblocks"></code></pre>
+        <div class="tooltip">
+            <a href="javascript:howtogetdarkthemecodeblocks();"><i class="fas fa-copy"></i></a>
+            <span class="tooltiptext">Copy</span>
+        </div>
     </div>
 
     <script>
@@ -190,7 +234,7 @@
         if (window.location.protocol == "http:") indow.location.protocol = "https:";
 
         document.getElementById("howtogetdarkthemecodeblocks").innerHTML =
-            `&lt;!DOCTYPE html&gt;
+`&lt;!DOCTYPE html&gt;
 
 &lt;html&gt;
     &lt;head&gt;
@@ -209,6 +253,31 @@
         &lt;/pre&gt;
     &lt;/body&gt;
 &lt;/html&gt;`;
+
+
+        async function howtogetdarkthemecodeblocks() {
+            let code = 
+`<!DOCTYPE html>
+
+<html>
+    <head>
+        <title>How To Get Code Blocks (Dark Theme)</title>
+        <script src="https://kit.fontawesome.com/c05b74df35.js" crossorigin="anonymous"></script>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.2.0/styles/base16/tomorrow-night.min.css"/>
+        <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.2.0/highlight.min.js"></script>
+        <script>hljs.highlightAll();</script>
+    </head>
+    <body>
+        <pre>
+            <code class="language-python"> <!-- you can replace 'python'; with any programming language -->
+                print("Hello, World!")
+                print("Yay this works!")
+            </code>
+        </pre>
+    </body>
+</html>`;
+            await navigator.clipboard.writeText(code);
+        }
     </script>
 
 </body>
