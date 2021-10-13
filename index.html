@@ -234,17 +234,21 @@
         if (window.location.protocol == "http:") indow.location.protocol = "https:";
 
 
-        fetch("https://raw.githubusercontent.com/NinjaCoderTech/ninjacodertech.xyz/main/snippets/howtogetdarkthemecodeblocks/formatted.txt").then(function (response) {
-            let code = response.toString();
-            document.getElementById("howtogetdarkthemecodeblocks").innerHTML = code;
-        });
+        fetch("https://raw.githubusercontent.com/NinjaCoderTech/ninjacodertech.xyz/main/snippets/howtogetdarkthemecodeblocks/formatted.txt")
+            .then((response) => { })
+            .then((data) => {
+                let code = data.toString();
+                document.getElementById("howtogetdarkthemecodeblocks").innerHTML = code;
+            });
 
 
         async function howtogetdarkthemecodeblocks() {
-            fetch("https://raw.githubusercontent.com/NinjaCoderTech/ninjacodertech.xyz/main/snippets/howtogetdarkthemecodeblocks/html.txt").then(function (response) {
-                let code = response.toString();
-            });
-            await navigator.clipboard.writeText(code);
+            fetch("https://raw.githubusercontent.com/NinjaCoderTech/ninjacodertech.xyz/main/snippets/howtogetdarkthemecodeblocks/html.txt")
+                .then((response) => { })
+                .then((data) => {
+                    let code = data.toString();
+                    await navigator.clipboard.writeText(code);
+                });
         }
     </script>
 
