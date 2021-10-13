@@ -246,8 +246,10 @@
             document.getElementById("bars").innerHTML = sidebarVisible ? '<i class="fas fa-times"></i>' : '<i class="fas fa-bars"></i>';
 
             document.getElementById("bars").style.textAlign = sidebarVisible ? "right" : "center";
-
-            document.getElementsByClassName("content")[0].style.marginLeft = sidebarVisible ? "15vw" : "0vw";
+            
+            document.getElementsByClassName("content")[0].style.marginLeft = sidebarVisible ? "15vw" : "5vw";
+            
+            document.getElementById("head").style.marginLeft = sidebarVisible ? "15vw" : "0vw";
         }
 
         if (window.location.protocol == "http:") window.location.protocol = "https:";
