@@ -219,7 +219,7 @@
             <a href="javascript:howtogetdarkthemecodeblocks();"><i class="fas fa-copy"></i></a>
             <span class="tooltiptext">Copy</span>
         </div>-->
-<pre>
+        <pre>
 <code>
 import java.util.Scanner;  // Import the Scanner class
 
@@ -241,7 +241,7 @@ public class MyClass {
 } 
 </code>
 </pre>
-        </section
+    </section>
     <script>
 
         var isDropped = false;
@@ -262,98 +262,129 @@ public class MyClass {
 
             document.getElementsByClassName("sidebar")[0].style.width = sidebarVisible ? "15vw" : "5vw";
 
-            document.getElementById("bars").innerHTML = sidebarVisible ? '<i class="fas fa-times"></i>' : '<i class="fas fa-bars"></i>';
+            document.getElementById("bars").innerHTML = sidebarVisible ? '<i class="fas fa-times"></i>' : '<i class="fas fa-bars" ></i > ';
 
             document.getElementById("bars").style.textAlign = sidebarVisible ? "right" : "center";
-            
+
             document.getElementsByClassName("content")[0].style.marginLeft = sidebarVisible ? "15vw" : "5vw";
-            
+
             document.getElementById("head").style.marginLeft = sidebarVisible ? "15vw" : "0vw";
         }
 
         if (window.location.protocol == "http:") window.location.protocol = "https:";
     </script>
-    
-    
-<style>
-pre code.hljs {
-    display: block;
-    overflow-x: auto;
-    padding: 1em;
-}
 
-code.hljs {
-    padding: 3px 5px;
-}
 
-.hljs {
-    color: #bbb;
-    background: #222;
-}
+    <style>
+        pre code.hljs {
+            display: block;
+            overflow-x: auto;
+            padding: 1em;
+        }
 
-.hljs-comment {
-    color: #666;
-}
+        code.hljs {
+            padding: 3px 5px;
+        }
 
-.hljs-tag {
-    color: #bbb;
-}
+        .hljs {
+            color: #bbb;
+            background: #222;
+        }
 
-.hljs-operator, .hljs-punctuation, .hljs-subst {
-    color: #bbb;
-}
+        .hljs-comment {
+            color: #666;
+        }
 
-.hljs-operator {
-    opacity: .7;
-}
+        .hljs-tag {
+            color: #bbb;
+        }
 
-.hljs-bullet, .hljs-deletion, .hljs-name, .hljs-selector-tag, .hljs-template-variable, .hljs-variable {
-    color: #63c6f7;
-}
+        .hljs-operator,
+        .hljs-punctuation,
+        .hljs-subst {
+            color: #bbb;
+        }
 
-.hljs-attr, .hljs-link, .hljs-literal, .hljs-number, .hljs-symbol, .hljs-variable.constant_ {
-    color: #ff99ff
-}
+        .hljs-operator {
+            opacity: .7;
+        }
 
-.hljs-class .hljs-title, .hljs-title, .hljs-title.class_ {
-    color: #fcc
-}
+        .hljs-bullet,
+        .hljs-deletion,
+        .hljs-name,
+        .hljs-selector-tag,
+        .hljs-template-variable,
+        .hljs-variable {
+            color: #63c6f7;
+        }
 
-.hljs-strong {
-    font-weight: 700;
-    color: #f6c
-}
+        .hljs-attr,
+        .hljs-link,
+        .hljs-literal,
+        .hljs-number,
+        .hljs-symbol,
+        .hljs-variable.constant_ {
+            color: #ff99ff
+        }
 
-.hljs-addition, .hljs-code, .hljs-string, .hljs-title.class_.inherited__ {
-    color: #cf3
-}
+        .hljs-class .hljs-title,
+        .hljs-title,
+        .hljs-title.class_ {
+            color: #fcc
+        }
 
-.hljs-built_in, .hljs-doctag, .hljs-keyword.hljs-atrule, .hljs-quote, .hljs-regexp {
-    color: #cc0
-}
+        .hljs-strong {
+            font-weight: 700;
+            color: #f6c
+        }
 
-.hljs-attribute, .hljs-function .hljs-title, .hljs-section, .hljs-title.function_, .ruby .hljs-property {
-    color: #0cc
-}
+        .hljs-addition,
+        .hljs-code,
+        .hljs-string,
+        .hljs-title.class_.inherited__ {
+            color: #cf3
+        }
 
-.diff .hljs-meta, .hljs-keyword, .hljs-template-tag, .hljs-type {
-    color: #0f4
-}
+        .hljs-built_in,
+        .hljs-doctag,
+        .hljs-keyword.hljs-atrule,
+        .hljs-quote,
+        .hljs-regexp {
+            color: #cc0
+        }
 
-.hljs-emphasis {
-    color: #057;
-    font-style: italic
-}
+        .hljs-attribute,
+        .hljs-function .hljs-title,
+        .hljs-section,
+        .hljs-title.function_,
+        .ruby .hljs-property {
+            color: #0cc
+        }
 
-.hljs-meta, .hljs-meta .hljs-keyword, .hljs-meta .hljs-string {
-    color: #0f4
-}
+        .diff .hljs-meta,
+        .hljs-keyword,
+        .hljs-template-tag,
+        .hljs-type {
+            color: #0f4
+        }
 
-.hljs-meta .hljs-keyword, .hljs-meta-keyword {
-    font-weight: 700
-}
-</style>
-    
+        .hljs-emphasis {
+            color: #057;
+            font-style: italic
+        }
+
+        .hljs-meta,
+        .hljs-meta .hljs-keyword,
+        .hljs-meta .hljs-string {
+            color: #0f4
+        }
+
+        .hljs-meta .hljs-keyword,
+        .hljs-meta-keyword {
+            font-weight: 700
+        }
+    </style>
+
 </body>
 
 </html>
