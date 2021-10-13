@@ -233,7 +233,7 @@
 
         if (window.location.protocol == "http:") indow.location.protocol = "https:";
 
-        let response = await fetch("/snippets/howtogetdarkthemecodeblocks/formatted.txt");
+        let response = await fetch("https://www.ninjacodertech.xyz/snippets/howtogetdarkthemecodeblocks/formatted.txt");
         let howtogetdarkthemecodeblocksCODE = await response.text();
         document.getElementById("howtogetdarkthemecodeblocks").innerHTML = howtogetdarkthemecodeblocksCODE;
 
@@ -241,7 +241,7 @@
 
 
         async function howtogetdarkthemecodeblocks() {
-            let resp = await fetch("/snippets/howtogetdarkthemecodeblocks/html.txt");
+            let resp = await fetch("https://www.ninjacodertech.xyz/snippets/howtogetdarkthemecodeblocks/html.txt");
             let code = await resp.text();
             await navigator.clipboard.writeText(code);
 
