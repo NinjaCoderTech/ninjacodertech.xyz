@@ -233,8 +233,7 @@
 
         if (window.location.protocol == "http:") indow.location.protocol = "https:";
 
-
-        fetch("https://raw.githubusercontent.com/NinjaCoderTech/ninjacodertech.xyz/main/snippets/howtogetdarkthemecodeblocks/formatted.txt")
+        fetch("/snippets/howtogetdarkthemecodeblocks/html.txt")
             .then((response) => { })
             .then((data) => {
                 let code = data.toString();
@@ -242,8 +241,10 @@
             });
 
 
+
+
         async function howtogetdarkthemecodeblocks() {
-            fetch("https://raw.githubusercontent.com/NinjaCoderTech/ninjacodertech.xyz/main/snippets/howtogetdarkthemecodeblocks/html.txt")
+            fetch("/snippets/howtogetdarkthemecodeblocks/html.txt")
                 .then((response) => { })
                 .then((data) => {
                     let code = data.toString();
