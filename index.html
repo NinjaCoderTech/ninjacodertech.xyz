@@ -233,23 +233,16 @@
 
         if (window.location.protocol == "http:") indow.location.protocol = "https:";
 
-        fetch("/snippets/howtogetdarkthemecodeblocks/html.txt")
-            .then((response) => { })
-            .then((data) => {
-                let code = data.toString();
-                document.getElementById("howtogetdarkthemecodeblocks").innerHTML = code;
-            });
+        let howtogetdarkthemecodeblocksCODE = require("/snippets/howtogetdarkthemecodeblocks/formatted.txt");
+        document.getElementById("howtogetdarkthemecodeblocks").innerHTML = howtogetdarkthemecodeblocksCODE;
 
 
 
 
         async function howtogetdarkthemecodeblocks() {
-            fetch("/snippets/howtogetdarkthemecodeblocks/html.txt")
-                .then((response) => { })
-                .then((data) => {
-                    let code = data.toString();
-                    await navigator.clipboard.writeText(code);
-                });
+            let code = require("/snippets/howtogetdarkthemecodeblocks/html.txt");
+            await navigator.clipboard.writeText(code);
+
         }
     </script>
 
