@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <title>How To Get Code Blocks (Dark Theme)</title>
+        <script src="https://kit.fontawesome.com/c05b74df35.js" crossorigin="anonymous"></script>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.2.0/styles/base16/tomorrow-night.min.css"/>
+        <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.2.0/highlight.min.js"></script>
+        <script>hljs.highlightAll();</script>
+    </head>
+    <body>
+        <pre>
+            <code class="language-python"> <!-- you can replace "python" with any programming language -->
+                print("Hello, World!")
+                print("Yay this works!")
+            </code>
+        </pre>
+    </body>
+</html>
